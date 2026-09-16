@@ -1,0 +1,231 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Saiakhil Chilaka} \\ \vspace{5pt}
+    \small (984) 260-2526 $|$ \href{mailto:sc3484@cornell.edu}{\underline{sc3484@cornell.edu}} $|$
+    \href{https://linkedin.com/in/akhilchilaka/}{\underline{linkedin.com/in/akhilchilaka}} $|$
+    \href{https://github.com/akhilc08}{\underline{github.com/akhilc08}} $|$
+    \href{https://akhilchilaka.com}{\underline{akhilchilaka.com}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Cornell University, College of Arts \& Sciences}{Ithaca, NY}
+      {B.A. in Computer Science}{Expected May 2028}
+      \resumeItemListStart
+       \resumeItem{\textbf{Relevant Coursework:} Distributed Systems for Machine Learning, Intro Machine Learning, Systems, Data Structures}
+%        \resumeItem{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Functional Programming, Discrete Math, Linear Algebra}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+      {MotherDuck}{May 2026 -- August 2026}
+      {Software Engineering Intern}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Built the internal evaluation harness to benchmark AI agents across 40 MotherDuck tasks over the CLI \& MCP}
+        \resumeItem{Examined failed agent trajectories to write CLI guides for 3 features, taking task category accuracies from $\sim$16\% to 100\%}
+        \resumeItem{Reduced agent token cost on the MotherDuck CLI up to 57\% through A/B testing 5 output design principles}
+
+        \resumeItem{Designed \& shipped CLI secret management commands, enabling AI agents deploy workflows without seeing credentials}
+
+        \resumeItemListEnd
+
+   \resumeSubheading
+      {Vanasse Hangen Brustlin, Inc.}{January 2026 -- May 2026}
+      {Software Engineering Intern}{Remote/Raleigh, NC}
+      \resumeItemListStart
+        \resumeItem{Designed an agentic PDF-to-form pipeline for car crash reports, cutting analyst time by 66\% over 10k+ crashes annually}
+        \resumeItem{Engineered an automated geocoder \& RAG classification layer w/ project docs as context, achieving $\sim$90\% accuracy}
+
+        \resumeItemListEnd
+
+
+
+    \resumeSubheading
+      {Duke University}{August 2024 -- December 2024}
+      {Research Intern}{Durham, NC}
+      \resumeItemListStart
+        \resumeItem{Published first-author IEEE paper on CNN ensemble for Multiple Sclerosis diagnosis; 97.5\% accuracy \& 97.8\% AUC-ROC}
+        \resumeItem{Fine-tuned VGG19/ResNet50 layers via depth-wise separable convolutions, reducing model size 14x for edge deployment}
+        \resumeItem{Injected Gaussian white noise alongside rotation, shear, and zoom augmentation to improve generalization by up to 7\%}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+   \resumeProjectHeading
+          {\textbf{Agentic Polymarket Predictor} $|$ \emph{Python, Neo4j, Qdrant, Claude API, FastAPI, Modal}}{}
+          \resumeItemListStart
+            \resumeItem{Built a 5-stage agentic predictor for Polymarket, achieving 30.5\% out-of-sample ROI on 950+ markets and 140+ trades}
+            \resumeItem{Architected a hybrid RAG pipeline over Neo4j \& Qdrant via Reciprocal Rank Fusion with a BGE reranker}
+            \resumeItem{Beat or matched the market on Brier scores on the 53\% of markets the model chose, validated across multiple evaluations}
+            \resumeItem{Caught 96\% of hallucinated claims via a 4-dimension LLM judge pipeline to detect priming, recency, \& confirmation bias}
+
+            \resumeItemListEnd
+
+
+    \resumeProjectHeading
+          {\textbf{Pass@k is Not a Property of a Model} $|$ \emph{Python, PyTorch, verl, AWS, SkyPilot}}{}
+          \resumeItemListStart
+            \resumeItem{Published first-author preprint on evaluating RL-trained LLMs \& methods for training/testing; submitted to conference}
+            \resumeItem{Showed central results of \textit{Limit of RLVR} (Yue et al.) fall 3x (36 to 12 pts) by altering the wording of the test questions}
+            \resumeItem{Evaluated that an ensemble of 3 independently trained Qwen2.5 runs beats one model by 6\% at matched sample budget}
+            \resumeItem{Showed the main reasoning benchmark (MATH-500) is 98.8\% solved by base models it tests, leaving 6/500 trials usable}
+
+            \resumeItemListEnd
+
+  \resumeProjectHeading
+          {\textbf{First Person Boxing Game} $|$ \emph{Python, PyTorch, ONNX, MediaPipe, Rust, TypeScript, Docker}}{}
+          \resumeItemListStart
+            \resumeItem{Built a 2 player boxing game engine that tracks movement through your camera and simulates a boxing match, like a Wii}
+            \resumeItem{Designed an ML model to classify punches into 5 types (ex. jab, hook) at 80\% accuracy \& compressed it to run in browser}
+            \resumeItem{Architected the game engine using 33 tracked body points per player 60 times a second, works out from joint speed whether a hit landed and where, then runs damage with hit thresholds calibrated to each player's own reach and speed}
+
+
+
+            \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+
+  %-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \item\small{
+      \textbf{Languages}{: Python, TypeScript, R, SQL, Java} \\
+      \textbf{Frameworks \& Libraries}{: PyTorch, TensorFlow, scikit-learn, LightGBM, verl, FastAPI, HuggingFace Transformers} \\
+      \textbf{Databases \& Infrastructure}{: PostgreSQL, Redis, Supabase, Neo4j, Qdrant, Celery, Modal, AWS ECS, Docker, Git}\\
+      \textbf{ML/AI}{: MCP, RAG, Agent Evaluation, LoRA, Knowledge Distillation, Reinforcement Learning, Reranking, Vector Search}
+
+      }
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+  \vspace{2pt}
+    \item\small{Chilaka et al. ``Pass@k Is Not a Property of a Model,'' Preprints 2026, 2026081495, doi: 10.20944/preprints202608.1495.v1}
+    \vspace{-5pt}
+    \item\small{Chilaka et al. ``CNN Ensemble MS Lesions Diagnosis for Embedded Systems,'' \textit{IEEE}, doi: 10.1109/MCSoC64144.2024.00079}
+    \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

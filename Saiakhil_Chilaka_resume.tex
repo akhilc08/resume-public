@@ -43,8 +43,8 @@
 \addtolength{\oddsidemargin}{-0.65in}
 \addtolength{\evensidemargin}{-0.65in}
 \addtolength{\textwidth}{1.3in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
 
@@ -54,8 +54,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -69,28 +69,28 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{0pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \vspace{-2pt}\item
+    \vspace{1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -132,15 +132,20 @@
   \resumeSubHeadingListStart
 
   \resumeSubheading
+      {Cornell Generative AI Lab}{August 2026 -- Present}
+      {Applied AI Researcher}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Researching context management systems for long horizon agents to mitigate entity binding failures \& governance decay}
+
+        \resumeItemListEnd
+
+  \resumeSubheading
       {MotherDuck}{May 2026 -- August 2026}
       {Software Engineering Intern}{New York, NY}
       \resumeItemListStart
         \resumeItem{Built the internal evaluation harness to benchmark AI agents across 40 MotherDuck tasks over the CLI \& MCP}
         \resumeItem{Examined failed agent trajectories to write CLI guides for 3 features, taking task category accuracies from $\sim$16\% to 100\%}
         \resumeItem{Reduced agent token cost on the MotherDuck CLI up to 57\% through A/B testing 5 output design principles}
-
-        \resumeItem{Designed \& shipped CLI secret management commands, enabling AI agents deploy workflows without seeing credentials}
-
         \resumeItemListEnd
 
    \resumeSubheading
@@ -163,12 +168,30 @@
         \resumeItem{Injected Gaussian white noise alongside rotation, shear, and zoom augmentation to improve generalization by up to 7\%}
         \resumeItemListEnd
 
+    \resumeSubheading
+        {North Carolina State University}{February 2024 -- September 2024}
+        {Research Intern}{Raleigh, NC}
+        \resumeItemListStart
+        \resumeItem{Implemented knowledge distillation on a skin cancer classifier via temperature-scaled KL divergence + cross-entropy loss, lifting accuracy 19\% \& bias 37\% while compressing model size 18x \& maintaining sub-10s inference on Raspberry Pi 4}
+        \resumeItem{Trained a generative adversarial network to synthesize training data, improving overall performance score by 13\%}
+        \resumeItemListEnd
   \resumeSubHeadingListEnd
+
+
 
 
 %-----------PROJECTS-----------
 \section{Projects}
   \resumeSubHeadingListStart
+
+  \resumeProjectHeading
+        {\textbf{Pass@k is Not a Property of a Model} $|$ \emph{Python, PyTorch, verl, AWS, SkyPilot}}{}
+        \resumeItemListStart
+          \resumeItem{Showed central results of \textit{Limit of RLVR} (Yue et al.) fall 3x (36 to 12 pts) by altering the wording of the test questions}
+          \resumeItem{Evaluated that an ensemble of 3 independently trained Qwen2.5 runs beats one model by 6\% at matched sample budget}
+          \resumeItem{Showed the main reasoning benchmark (MATH-500) is 98.8\% solved by base models it tests, leaving 6/500 trials usable}
+
+          \resumeItemListEnd
 
    \resumeProjectHeading
           {\textbf{Agentic Polymarket Predictor} $|$ \emph{Python, Neo4j, Qdrant, Claude API, FastAPI, Modal}}{}
@@ -176,30 +199,6 @@
             \resumeItem{Built a 5-stage agentic predictor for Polymarket, achieving 30.5\% out-of-sample ROI on 950+ markets and 140+ trades}
             \resumeItem{Architected a hybrid RAG pipeline over Neo4j \& Qdrant via Reciprocal Rank Fusion with a BGE reranker}
             \resumeItem{Beat or matched the market on Brier scores on the 53\% of markets the model chose, validated across multiple evaluations}
-            \resumeItem{Caught 96\% of hallucinated claims via a 4-dimension LLM judge pipeline to detect priming, recency, \& confirmation bias}
-
-            \resumeItemListEnd
-
-
-    \resumeProjectHeading
-          {\textbf{Pass@k is Not a Property of a Model} $|$ \emph{Python, PyTorch, verl, AWS, SkyPilot}}{}
-          \resumeItemListStart
-            \resumeItem{Published first-author preprint on evaluating RL-trained LLMs \& methods for training/testing; submitted to conference}
-            \resumeItem{Showed central results of \textit{Limit of RLVR} (Yue et al.) fall 3x (36 to 12 pts) by altering the wording of the test questions}
-            \resumeItem{Evaluated that an ensemble of 3 independently trained Qwen2.5 runs beats one model by 6\% at matched sample budget}
-            \resumeItem{Showed the main reasoning benchmark (MATH-500) is 98.8\% solved by base models it tests, leaving 6/500 trials usable}
-
-            \resumeItemListEnd
-
-  \resumeProjectHeading
-          {\textbf{First Person Boxing Game} $|$ \emph{Python, PyTorch, ONNX, MediaPipe, Rust, TypeScript, Docker}}{}
-          \resumeItemListStart
-            \resumeItem{Built a 2 player boxing game engine that tracks movement through your camera and simulates a boxing match, like a Wii}
-            \resumeItem{Designed an ML model to classify punches into 5 types (ex. jab, hook) at 80\% accuracy \& compressed it to run in browser}
-            \resumeItem{Architected the game engine using 33 tracked body points per player 60 times a second, works out from joint speed whether a hit landed and where, then runs damage with hit thresholds calibrated to each player's own reach and speed}
-
-
-
             \resumeItemListEnd
 
   \resumeSubHeadingListEnd

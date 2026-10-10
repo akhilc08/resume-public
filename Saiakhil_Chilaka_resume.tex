@@ -122,8 +122,7 @@
       {Cornell University, College of Arts \& Sciences}{Ithaca, NY}
       {B.A. in Computer Science}{Expected May 2028}
       \resumeItemListStart
-       \resumeItem{\textbf{Relevant Coursework:} Distributed Systems for Machine Learning, Intro Machine Learning, Systems, Data Structures}
-%        \resumeItem{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Functional Programming, Discrete Math, Linear Algebra}
+       \resumeItem{\textbf{Relevant Coursework:} Distributed Systems for ML, Machine Learning, Computer Systems, Data Structures}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -135,8 +134,8 @@
       {Cornell Generative AI Lab}{August 2026 -- Present}
       {Applied AI Researcher}{Ithaca, NY}
       \resumeItemListStart
-        \resumeItem{Researching context management systems for long horizon agents to mitigate entity binding failures \& governance decay}
-
+        \resumeItem{Built a compaction recipe for coding agents with 93\% instruction retention vs. 85\% for full context at 1/3 the tokens}
+        \resumeItem{Beat 27 common compaction methods on LongMemEval (98.7\%) \& matched the best method on $\tau$-bench at 8\%}
         \resumeItemListEnd
 
   \resumeSubheading
@@ -148,14 +147,14 @@
         \resumeItem{Reduced agent token cost on the MotherDuck CLI up to 57\% through A/B testing 5 CLI output optimizations}
         \resumeItemListEnd
 
-   \resumeSubheading
-      {Vanasse Hangen Brustlin, Inc.}{January 2026 -- May 2026}
-      {Software Engineering Intern}{Remote/Raleigh, NC}
-      \resumeItemListStart
-        \resumeItem{Designed an agentic PDF-to-form pipeline for car crash reports, cutting analyst time by 66\% over 10k+ crashes annually}
-        \resumeItem{Engineered an automated geocoder \& RAG classification layer w/ project docs as context, achieving $\sim$90\% accuracy}
+   % \resumeSubheading
+   %    {Vanasse Hangen Brustlin, Inc.}{January 2026 -- May 2026}
+   %    {Software Engineering Intern}{Remote/Raleigh, NC}
+   %    \resumeItemListStart
+   %      \resumeItem{Designed an agentic PDF-to-form pipeline for car crash reports, cutting analyst time by 66\% over 10k+ crashes annually}
+   %      \resumeItem{Engineered an automated geocoder \& RAG classification layer w/ project docs as context, achieving $\sim$90\% accuracy}
 
-        \resumeItemListEnd
+   %      \resumeItemListEnd
 
 
 
@@ -172,7 +171,8 @@
         {North Carolina State University}{February 2024 -- September 2024}
         {Research Intern}{Raleigh, NC}
         \resumeItemListStart
-        \resumeItem{Implemented knowledge distillation on a skin cancer classifier via temperature-scaled KL divergence + cross-entropy loss, lifting accuracy 19\% \& bias 37\% while compressing model size 18x \& maintaining sub-10s inference on Raspberry Pi 4}
+        %\resumeItem{Implemented knowledge distillation on a skin cancer classifier via temperature-scaled KL divergence + cross-entropy loss, lifting accuracy 19\% \& bias 37\% while compressing model size 18x \& maintaining sub-10s inference on Raspberry Pi 4}
+        \resumeItem{Built a skin cancer classifier for edge devices with knowledge distillation, shrinking it 18x and lifting accuracy 19\%}
         \resumeItem{Trained a generative adversarial network to synthesize training data, improving overall performance score by 13\%}
         \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -185,18 +185,33 @@
   \resumeSubHeadingListStart
 
   \resumeProjectHeading
-        {\textbf{Pass@k is Not a Property of a Model} $|$ \emph{Python, PyTorch, verl, AWS}}{}
+        {\textbf{ForeSight: Calibrated Decision Models as Opponent Forecasters} $|$ \emph{Submitted to AAAI '27}}{}
         \resumeItemListStart
-          \resumeItem{Showed central results of \textit{Limit of RLVR} (Yue et al.) fall 3x (36 to 12 pts) by altering the wording of the test questions}
-          \resumeItem{Evaluated that an ensemble of 3 independently trained Qwen2.5 runs beats one model by 6\% at matched sample budget}
-          \resumeItem{Showed the main reasoning benchmark (MATH-500) is 98.8\% solved by base models it tests, leaving 6/500 trials usable}
-
+          \resumeItem{Built a Pokemon game agent using a system one opponent forecaster, matching published LLM agents accuracy (56\%)}
+          \resumeItem{Fine-tuned a 421M System One model (Laya) to forecast opponent moves, lifting prediction accuracy from 43\% to 80\%}
+          \resumeItem{Showed 2-turn lookahead adds 13–20 pts to win rate over one-step play, using 4\% of per-turn budget for lookahead search}
           \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Attributing Tool Failures in Bulk Agent Operations} $|$ \emph{Submitted to NAACL '27}}{}
+        \resumeItemListStart
+            \resumeItem{Benchmarked LLM agents on AppWorld, finding they misreport which tool call failed in long runs 67\% of the time}
+            \resumeItem{Built a drop-in MCP proxy that echoes call arguments into results, restoring 94–100\% accuracy across Claude \& GPT}
+            \resumeItemListEnd
+
+  % \resumeProjectHeading
+  %       {\textbf{Pass@k is Not a Property of a Model} $|$ \emph{Python, PyTorch, verl, AWS}}{}
+  %       \resumeItemListStart
+  %         \resumeItem{Showed central results of \textit{Limit of RLVR} (Yue et al.) fall 3x (36 to 12 pts) by altering the wording of the test questions}
+  %         \resumeItem{Evaluated that an ensemble of 3 independently trained Qwen2.5 runs beats one model by 6\% at matched sample budget}
+  %         %\resumeItem{Showed the main reasoning benchmark (MATH-500) is 98.8\% solved by base models it tests, leaving 6/500 trials usable}
+
+  %         \resumeItemListEnd
 
    \resumeProjectHeading
           {\textbf{Agentic Polymarket Predictor} $|$ \emph{Python, Neo4j, Qdrant, Claude API, FastAPI, Modal}}{}
           \resumeItemListStart
-            \resumeItem{Built a 5-stage agentic predictor for Polymarket, achieving 30.5\% out-of-sample ROI on 950+ markets and 140+ trades}
+            \resumeItem{Built a 5-stage agentic predictor for Polymarket, achieving 17\% ROI during forward testing \& 30.5\% ROI for backtesting}
             \resumeItem{Architected a hybrid RAG pipeline over Neo4j \& Qdrant via Reciprocal Rank Fusion with a BGE reranker}
             \resumeItem{Beat or matched the market on Brier scores on the 53\% of markets the model chose, validated across multiple evaluations}
             \resumeItemListEnd
@@ -220,11 +235,10 @@
 %-----------PUBLICATIONS-----------
 \section{Publications}
   \resumeSubHeadingListStart
-  \vspace{2pt}
-    \item\small{Chilaka et al. ``Pass@k Is Not a Property of a Model,'' Preprints 2026, 2026081495, doi: 10.20944/preprints202608.1495.v1}
-    \vspace{-5pt}
-    \item\small{Chilaka et al. ``CNN Ensemble MS Lesions Diagnosis for Embedded Systems,'' \textit{IEEE}, doi: 10.1109/MCSoC64144.2024.00079}
-    \resumeSubHeadingListEnd
+  \vspace{-8px}
+  \resumeProjectHeading
+        {\textbf{Chilaka et al. "CNN Ensemble for Multiple Sclerosis Diagnosis on Embedded Systems"} $|$ IEEE MCSoC '24}{}
+        \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
